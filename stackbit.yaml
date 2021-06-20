@@ -1,0 +1,19 @@
+stackbitVersion: ~0.3.0
+ssgName: nextjs
+cmsName: contentful
+nodeVersion: '12'
+import:
+  type: contentful
+  contentFile: contentful-export/export.json
+  spaceIdEnvVar: CONTENTFUL_SPACE_ID
+  accessTokenEnvVar: CONTENTFUL_DELIVERY_TOKEN
+models:
+  landing:
+    type: page
+    urlPath: '/{slug}'
+  page:
+    type: page
+    urlPath: '/{slug}'
+  post:
+    type: page
+    urlPath: '/blog/{slug}'
